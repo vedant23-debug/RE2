@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscriptions – Ember &amp; Leaf</title>
+<meta name="description" content="Tea and coffee delivered on a schedule you choose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="subs">
+<main id="main">
+<div class="pagehead"><div class="wrap"><h1>Delivered on repeat</h1><p>Choose a product and a schedule. You always see the recurring amount before you agree.</p></div></div>
+<section class="wrap two">
+  <div><h2>How it works</h2><p>Pick one product and how often it should arrive. Shipping and tax are added at checkout. You can skip, pause or cancel before the next cycle once billing is connected.</p></div>
+  <form id="sub-form" class="box">
+    <label for="sub-product">Product</label><select id="sub-product"></select>
+    <label for="sub-freq">Frequency</label>
+    <select id="sub-freq"><option value="Every week">Every week</option><option value="Every 2 weeks">Every 2 weeks</option><option value="Every month" selected>Every month</option></select>
+    <p id="sub-summary" class="sum"></p>
+    <label class="check"><input type="checkbox" id="sub-consent"> I agree to be charged this amount on this schedule until I cancel.</label>
+    <button class="btn solid" id="sub-go" disabled>Start subscription</button>
+    <p id="sub-msg" class="muted" role="status"></p>
+  </form>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
